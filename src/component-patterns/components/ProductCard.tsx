@@ -7,6 +7,10 @@ const ProductCard = () => {
 
   const [counter, setCounter] = useState(0);
 
+  const increaseBy = (value: number) => {
+    setCounter(prev => Math.max(prev + value, 0 ))
+  }
+
   return (
     <div className={style.productCard}>
         <img className={style.productImg} src="./coffee-mug.png" alt="Coffee Mug" />
@@ -19,7 +23,7 @@ const ProductCard = () => {
         
             <div className={style.countLabel}> { counter }</div>
 
-            <button className={style.buttonAdd}> + </button>
+            <button onClick={increaseBy} className={style.buttonAdd}> + </button>
 
         </div>
     </div>
