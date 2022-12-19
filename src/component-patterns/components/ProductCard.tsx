@@ -22,7 +22,7 @@ const ProductCard = ({ product }: Props) => {
     <div className={style.productCard}>
         <img className={style.productImg} src={product.img ? product.img: noImage } alt="Coffee Mug" />
         {/* <img className={style.productImg} src={noImage} alt="Coffee Mug" /> */}
-        <span className={style.productDescription}>{product.title }</span>
+        <span className={style.productDescription}>{product.title}</span>
 
         <div className={ style.buttonsContainer}>
 
