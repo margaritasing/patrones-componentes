@@ -11,7 +11,6 @@ const increaseBy = (value: number) => {
 return {
     counter,
     increaseBy
-
 }
 
 }
