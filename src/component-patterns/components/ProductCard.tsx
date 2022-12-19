@@ -19,11 +19,12 @@ const ProductCard = () => {
 
         <div className={ style.buttonsContainer}>
 
-            <button className={style.buttonMinus}>-</button>
+            <button className={style.buttonMinus}
+            onClick={() => increaseBy(-1)}>-</button>
         
             <div className={style.countLabel}> { counter }</div>
 
-            <button onClick={increaseBy} className={style.buttonAdd}> + </button>
+            <button onClick={() => increaseBy(+1)} className={style.buttonAdd}> + </button>
 
         </div>
     </div>
