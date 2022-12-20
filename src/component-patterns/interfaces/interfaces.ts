@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 
-export interface Props {
+export interface ProductCardProps {
     product:Product,
     children?: ReactElement | ReactElement[]
 }
