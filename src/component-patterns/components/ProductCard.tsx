@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { createContext, ReactElement } from 'react';
 import { useProduct } from '../hooks/useProduct'
 import style from '../styles/styles.module.css'
 import noImage from '../assets/no-image.jpg'
@@ -14,6 +14,9 @@ interface Product {
     title:string;
     img?:string;
 }
+
+const ProductContext = createContext({});
+const { Provider } =  ProductContext
 
 
 export const ProductImage = ({img = '' }) => {
@@ -51,26 +54,33 @@ export const ProductButton = ({increaseBy, counter}: ProductButtonProps) => {
 
 
 export const ProductCard = ({ children, product }: Props) => { 
+  
   const {counter, increaseBy } = useProduct(); 
 
 
   return (
-    <div className={style.productCard}>
+    <Provider value={{
+      counter,
+      increaseBy, 
+      product
+    }}>
+        <div className={style.productCard}>
 
-      { children }
+        { children }
 
-     {/*  <ProductImage img={product.img} />
+        {/*  <ProductImage img={product.img} />
+          
+        <ProductTitle title={product.title}/>
+
+        <ProductButton increaseBy={ increaseBy } 
+        counter={ counter }/> */}
         
-      <ProductTitle title={product.title}/>
-
-      <ProductButton increaseBy={ increaseBy } 
-      counter={ counter }/> */}
-       
-    </div>
+        </div>
+    </Provider>
   )
 }
 
-ProductCard.Title = ProductTitle;
-ProductCard.Image = ProductImage;
+ProductCard.Title   = ProductTitle;
+ProductCard.Image   = ProductImage;
 ProductCard.Buttons = ProductButton;
 
