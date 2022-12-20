@@ -1,7 +1,7 @@
-import { createContext, useContext } from 'react';
+import { createContext } from 'react';
 import { useProduct } from '../hooks/useProduct'
 import style from '../styles/styles.module.css';
-import { ProductContextProps } from '../interfaces/interfaces';
+import { ProductCardProps, ProductContextProps } from '../interfaces/interfaces';
 import { ProductImage } from './ProductImage';
 import { ProductTitle } from './ProductTitle';
 import { ProductButton } from './ProductButton';
@@ -14,7 +14,7 @@ const { Provider } =  ProductContext;
 
 
 
-export const ProductCard = ({ children, product }: Props) => { 
+export const ProductCard = ({ children, product }: ProductCardProps) => { 
 
   const {counter, increaseBy } = useProduct(); 
 
