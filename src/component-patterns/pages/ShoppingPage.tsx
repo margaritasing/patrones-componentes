@@ -20,11 +20,12 @@ export const Shoppingpage = () =>{
                     <ProductButton/>       
                 </ProductCard> 
             </div>
-            {/* Esta es la segunda manera de exportar y mostrar componentes */}
+            {/* Esta es la segunda manera de exportar y mostrar componentes 
+            esto es el compont-component-parents*/}
             <div style={{display:'flex', flexDirection:'row',flexWrap:'wrap'}}>
                 <ProductCard product={ product }>                  
                     <ProductCard.Image/>
-                    <ProductCard.Title title={"Coffee"}/>    
+                    <ProductCard.Title />    
                     <ProductCard.Buttons/>       
                 </ProductCard> 
             </div>
