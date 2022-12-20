@@ -50,7 +50,7 @@ export const ProductButton = ({increaseBy, counter}: ProductButtonProps) => {
 }
 
 
-const ProductCard = ({ children, product }: Props) => { 
+export const ProductCard = ({ children, product }: Props) => { 
   const {counter, increaseBy } = useProduct(); 
 
 
@@ -70,4 +70,7 @@ const ProductCard = ({ children, product }: Props) => {
   )
 }
 
-export default ProductCard
+ProductCard.Title = ProductTitle;
+ProductCard.Image = ProductImage;
+ProductCard.Buttons = ProductButton;
+
