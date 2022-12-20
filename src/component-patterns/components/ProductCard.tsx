@@ -14,26 +14,53 @@ interface Product {
 }
 
 
+export const ProductImage = ({img = '' }) => {
+  return (
+    <img className={style.productImg} src={ img ? img: noImage } alt="Product-img" />  
+  )
+}
+
+export const ProductTitle = ({title}: {title:string}) => {
+  return (
+    <span className={style.productDescription}>{title}</span>
+  )  
+}
+
+interface ProductButtonProps {
+  increaseBy: (value:number) => void,
+  counter:number
+}
+
+export const ProductButton = ({increaseBy, counter}: ProductButtonProps) => {
+  return (
+    <div className={ style.buttonsContainer}>
+
+      <button className={style.buttonMinus}
+      onClick={() => increaseBy(-1)}>-</button>
+
+      <div className={style.countLabel}> { counter }</div>
+
+      <button onClick={() => increaseBy(+1)} className={style.buttonAdd}> + </button>
+
+  </div>
+
+  )
+}
+
+
 const ProductCard = ({ product }: Props) => { 
   const {counter, increaseBy } = useProduct(); 
 
 
   return (
     <div className={style.productCard}>
-        <img className={style.productImg} src={product.img ? product.img: noImage } alt="Coffee Mug" />
-        {/* <img className={style.productImg} src={noImage} alt="Coffee Mug" /> */}
-        <span className={style.productDescription}>{product.title}</span>
-
-        <div className={ style.buttonsContainer}>
-
-            <button className={style.buttonMinus}
-            onClick={() => increaseBy(-1)}>-</button>
+      <ProductImage img={product.img} />
         
-            <div className={style.countLabel}> { counter }</div>
+      <ProductTitle title={product.title}/>
 
-            <button onClick={() => increaseBy(+1)} className={style.buttonAdd}> + </button>
-
-        </div>
+      <ProductButton increaseBy={ increaseBy } 
+      counter={ counter }/>
+       
     </div>
   )
 }
