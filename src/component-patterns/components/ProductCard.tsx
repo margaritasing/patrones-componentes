@@ -44,7 +44,7 @@ export const ProductImage = ({img = '' }) => {
   )
 }
 
-export const ProductTitle = ({title}: {title:string}) => {
+export const ProductTitle = ({title}: {title?:string}) => {
 
   const {product} = useContext(ProductContext)
 
