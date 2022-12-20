@@ -10,26 +10,22 @@ const product = {
 
 export const Shoppingpage = () =>{
     return (
-        <div>
+        <div style={{ textAlign:'center' }}>
             <h1>Shopping Store</h1>
             <hr />
-            <div style={{display:'flex', flexDirection:'row',flexWrap:'wrap' }}>
+            <div style={{display:'flex', flexDirection:'row',flexWrap:'wrap'}}>
                 <ProductCard product={ product }>                  
                     <ProductImage/>
-                    <ProductTitle title={" "}/>    
-                    <ProductButton increaseBy={function (value: number): void {
-                            throw new Error("Function not implemented.");
-                        } } counter={0}/>       
+                    <ProductTitle title={"Coffee"}/>    
+                    <ProductButton/>       
                 </ProductCard> 
             </div>
             {/* Esta es la segunda manera de exportar y mostrar componentes */}
-            <div style={{display:'flex', flexDirection:'row',flexWrap:'wrap' }}>
+            <div style={{display:'flex', flexDirection:'row',flexWrap:'wrap'}}>
                 <ProductCard product={ product }>                  
                     <ProductCard.Image/>
-                    <ProductCard.Title title={" "}/>    
-                    <ProductCard.Buttons increaseBy={function (value: number): void {
-                            throw new Error("Function not implemented.");
-                        } } counter={0}/>       
+                    <ProductCard.Title title={"Coffee"}/>    
+                    <ProductCard.Buttons/>       
                 </ProductCard> 
             </div>
         </div>
