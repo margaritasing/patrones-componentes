@@ -1,10 +1,9 @@
 import {ProductCard, ProductButton, ProductImage, ProductTitle } from "../components";
 
 const product = {
-    id:'1',
-    title:'Coffee Mug - Card',
-    img:'./coffee-mug.png'
-
+  id:'1',
+  title:'Coffee Mug - Card',
+  img:'./coffee-mug.png'
 }
 
 export const Shoppingpage = () =>{
@@ -30,6 +29,5 @@ export const Shoppingpage = () =>{
             </div>
         </div>
         /* Se usan diferentes maneras para exportar los componentes */
-
     )
 }

@@ -5,19 +5,19 @@ import noImage from '../assets/no-image.jpg';
 
 export const ProductImage = ({img = '' }) => {
 
-    const { product } = useContext( ProductContext )
+  const { product } = useContext( ProductContext )
   
-    let imgToShow: string;
+  let imgToShow: string;
   
-    if (img) {
+  if (img) {
       imgToShow = img;   
-    }else if (product.img) {
+  }else if (product.img) {
       imgToShow = product.img;  
-    }else{
+  }else {
       imgToShow = noImage;
-    }
-  
-    return (
-      <img className={style.productImg} src={ imgToShow } alt="Product-img" />  
-    )
   }
+  
+  return (
+      <img className={style.productImg} src={ imgToShow } alt="Product-img" />  
+  )
+}

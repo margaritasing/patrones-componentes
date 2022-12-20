@@ -3,13 +3,12 @@ import { ProductContext } from "./ProductCard"
 import style from '../styles/styles.module.css';
 
 
-
 export const ProductButton = () => {
 
-    const { increaseBy, counter } = useContext(ProductContext)
+  const { increaseBy, counter } = useContext(ProductContext)
   
-    return (
-      <div className={ style.buttonsContainer}>
+  return (
+    <div className={ style.buttonsContainer}>
   
         <button className={style.buttonMinus}
         onClick={() => increaseBy(-1)}>-</button>
@@ -20,6 +19,6 @@ export const ProductButton = () => {
   
     </div>
   
-    )
-  }
+  )
+}
   
