@@ -16,14 +16,14 @@ export const Shoppingpage = () =>{
                 <ProductCard product={ product } className="bg-dark" >                  
                     <ProductImage className='custom-image'/>
                     <ProductTitle title={"Coffee"} className='text-blanco'/>    
-                    <ProductButton/>       
+                    <ProductButton className="custom-buttons"/>       
                 </ProductCard> 
             {/* Esta es la segunda manera de exportar y mostrar componentes 
             esto es el compont-component-parents*/}
-                <ProductCard product={ product } >                  
-                    <ProductCard.Image/>
-                    <ProductCard.Title />    
-                    <ProductCard.Buttons/>       
+                <ProductCard product={ product } className="bg-dark" >                  
+                    <ProductCard.Image className='custom-image'/>
+                    <ProductCard.Title className='text-blanco' />    
+                    <ProductCard.Buttons className="custom-buttons"/>       
                 </ProductCard> 
             </div>
            
