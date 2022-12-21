@@ -1,4 +1,15 @@
 .bg-dark {
     background-color: rgb(65, 61, 61);
+    
+}
+
+.text-blanco {
     color: #fff;
+}
+
+.custom-image {
+    padding: 10px;
+    width: calc(100% - 20px);
+    border-radius: 20px;
+    text-align: center;
 }
