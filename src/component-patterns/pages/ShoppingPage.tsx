@@ -1,4 +1,5 @@
 import {ProductCard, ProductButton, ProductImage, ProductTitle } from "../components";
+import '../styles/custom-styles.css';
 
 const product = {
   id:'1',
@@ -8,7 +9,7 @@ const product = {
 
 export const Shoppingpage = () =>{
     return (
-        <div style={{ textAlign:'center' }}>
+        <div  style={{ textAlign:'center' }}>
             <h1>Shopping Store</h1>
             <hr />
             <div style={{display:'flex', flexDirection:'row',flexWrap:'wrap'}}>
@@ -17,16 +18,15 @@ export const Shoppingpage = () =>{
                     <ProductTitle title={"Coffee"}/>    
                     <ProductButton/>       
                 </ProductCard> 
-            </div>
             {/* Esta es la segunda manera de exportar y mostrar componentes 
             esto es el compont-component-parents*/}
-            <div style={{display:'flex', flexDirection:'row',flexWrap:'wrap'}}>
-                <ProductCard product={ product }>                  
+                <ProductCard product={ product } className="bg-dark" >                  
                     <ProductCard.Image/>
                     <ProductCard.Title />    
                     <ProductCard.Buttons/>       
                 </ProductCard> 
             </div>
+           
         </div>
         /* Se usan diferentes maneras para exportar los componentes */
     )
