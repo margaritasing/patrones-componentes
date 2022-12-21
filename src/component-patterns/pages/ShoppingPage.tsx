@@ -13,14 +13,14 @@ export const Shoppingpage = () =>{
             <h1>Shopping Store</h1>
             <hr />
             <div style={{display:'flex', flexDirection:'row',flexWrap:'wrap'}}>
-                <ProductCard product={ product }>                  
-                    <ProductImage/>
-                    <ProductTitle title={"Coffee"}/>    
+                <ProductCard product={ product } className="bg-dark" >                  
+                    <ProductImage className='custom-image'/>
+                    <ProductTitle title={"Coffee"} className='text-blanco'/>    
                     <ProductButton/>       
                 </ProductCard> 
             {/* Esta es la segunda manera de exportar y mostrar componentes 
             esto es el compont-component-parents*/}
-                <ProductCard product={ product } className="bg-dark" >                  
+                <ProductCard product={ product } >                  
                     <ProductCard.Image/>
                     <ProductCard.Title />    
                     <ProductCard.Buttons/>       
